@@ -1,0 +1,64 @@
+<div class="container-fluid p-0 m-0 d-flex">
+
+  <app-menu></app-menu>
+  <div class="container-fluid pt-3">
+  
+      <div class="col-12">
+          <h1 class="titulo">
+              Cadastro de usuários
+          </h1>
+          <h2 class="subtitulo">
+              Gerenciar usuários, adicionando, editando ou excluindo
+          </h2>
+      </div>
+     
+      <div class="row mt-2">
+          <div class="col-12">
+          <app-button class="float-end" textButton="+ Cadastrar"></app-button>
+          </div>
+   <!-- PARTE DO FILTRO QUE VEM DO ANGULAR MATERIAL-->
+   <mat-form-field style="width: 200px;">
+      <mat-label>Buscar Usuário</mat-label>
+      <input matInput (keyup)="applyFilter($event)" placeholder="Digite sua busca">
+    </mat-form-field>
+  
+      
+<mat-table [dataSource]="dataSource" class="custom-table">
+  <!-- Colunas definidas dinamicamente -->
+  <ng-container *ngFor="let column of displayedColumns" [matColumnDef]="column">
+      <th mat-header-cell *matHeaderCellDef>{{ column }}</th>
+      <td mat-cell *matCellDef="let element">
+          <ng-container *ngIf="column !== 'view' && column !== 'edit' && column !== 'delete'; else acoesColumn">
+              {{ element[column] }}
+          </ng-container>
+          <ng-template #acoesColumn>
+              <button mat-icon-button *ngIf="column === 'view'" (click)="openModal(element.id)">
+                  <mat-icon>visibility</mat-icon>
+              </button>
+              <button mat-icon-button *ngIf="column === 'edit'" (click)="abrirModalEditarUsuario(element.id)">
+                  <mat-icon>edit</mat-icon>
+              </button>
+              <button mat-icon-button *ngIf="column === 'delete'" (click)="deleteModal(element.id)">
+                  <mat-icon>delete</mat-icon>
+              </button>
+          </ng-template>
+      </td>
+  </ng-container>
+
+
+  <!-- Definição das linhas da tabela -->
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>
+
+
+            <!-- Paginador -->
+<mat-paginator [pageSizeOptions]="[5, 10, 15]" showFirstLastButtons aria-label="Selecione usuários por página"></mat-paginator>
+
+
+  
+  </div>
+  
+  </div>
+  
+  </div>

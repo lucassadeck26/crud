@@ -1,0 +1,147 @@
+<div class="container-fluid p-0 m-0 d-flex">
+    <app-menu class="sidemenu"></app-menu>
+    
+    <div class="container-fluid pt-3 flex-grow-1">
+        <div class="row">
+            <!-- LADO ESQUERDO DA TELA, CRIAÇÃO DO PRIMEIRO CARD  -->
+            <div class="col">
+                <div class="card-info">
+                    <div class="row">
+                        <div class="col-12 col-md-8">
+                            <h1 class="titulo">Crud de Usuários</h1>
+                            <h3 class="subtitulo">
+                                Mais eficiência na gestão dos <span class="texto_destacado">usuários</span> e de seus benefícios. Chega de sistemas antigos e sem usabilidade, agora com o <span class="texto_destacado">Crud de Usuários</span> seu trabalho fica até 3x mais rápido e simplificado.
+
+                                Confira um resumo das informações em nosso <span class="texto_destacado">Dashboard</span>.
+                            </h3>
+                            <!-- Reutilização do button-component, se o componente de Usuários ainda não tiver sido criado, vai dar erro-->
+                            <app-button textButton="Iniciar Sistema" routerLink="/crud"></app-button>
+                        </div>
+                        <div class="col-12 col-md-4" >
+                            <!-- Colocar imagem com cem porcento de largura, para que não seja utilizada seu tamanho original -->
+                            <img src="../../../assets/dashboard.png" width="100%">
+                        </div>
+                    </div>
+                </div>
+            </div>
+       <!-- CRIAÇÃO DO SEGUNDO E TERCEIRO CARD  -->
+            <!-- CARD DA DIREITA -->
+            <div class="row mt-4">
+                <div class="col-6">
+                    <div class="card-info">
+                        <div class="row">
+                            <div class="col-8">    
+                                <p class="texto-card">
+                                    Total de usuários cadastrados no sistema
+                                </p>
+                                <p class="numero-card">
+                                    80
+                                </p>
+                                <p class="destaque-card">
+                                    +5 Adicionados no último mês
+                                </p>
+                            </div>  
+                            <div class="col-4">
+                                <mat-progress-spinner class="example-margin mx-auto color-spinner" mode="determinate" value="80"></mat-progress-spinner>
+                                <p class="info-spinner"> 
+                                    80/150
+                                </p>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- CARD DA ESQUERDA -->
+                <div class="col-6">
+                    <div class="card-info">
+                        <div class="row">
+                            <div class="col-8">    
+                                <p class="texto-card">
+                                    Total de benefícios cadastrados
+                                </p>
+                                <p class="numero-card">
+                                    4
+                                </p>
+                                <p class="destaque-card">
+                                    +2 Adicionados no último mês
+                                </p>
+                            </div>  
+                            <div class="col-4">
+                                <mat-progress-spinner class="example-margin mx-auto color-spinner" mode="determinate" value="80"></mat-progress-spinner>
+                                <p class="info-spinner"> 
+                                    4/5
+                                </p>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            
+             <!-- CRIAÇÃO DO QUARTO CARD, USUÁRIOS CADASTRADO  -->
+             <div class="col-12">
+                <div class="card-info">
+                    <h3 class="titulo">   último usuário cadastrado      </h3>
+                     
+              
+
+
+                    <hr class="hr">
+
+
+                  <div class="row">
+                        <div class="col-1"> <mat-icon> account_circle</mat-icon> </div>
+                        <div class="col-1"> <p class="texto-p">1</p> </div>
+                        <div class="col-1"> <p class="texto-p">Lucas Sadeck</p> </div>
+                        <div class="col"> Desenvolvedor Full-Stack </div>
+                                         
+                    </div>
+
+                </div>
+             </div>
+
+
+</div>
+
+
+
+</div>
+
+
+   <!-- CRIAÇÃO DO QUINTO CARD -->
+   <div class="col-12 col-lg-3">
+    <div class="card-info">
+        <div class="container-perfil">
+            <img src="../../../assets/img_perfil.png" width="90px" class="img-perfil">
+            <h4>Seja bem-vindo</h4>
+            <h5>{{ userName }}</h5>
+            <ul>
+                <li><mat-icon>location_on</mat-icon> PA - Brasil</li>
+            </ul>
+        </div>
+        <hr class="hr">
+        <p class="texto-p">
+            "Um ser humano deve transformar informações em inteligência ou conhecimento."
+        </p>
+        <hr class="hr">
+        <ul>
+            <li><mat-icon>person</mat-icon> Gerencie usuários</li>
+            <li><mat-icon>loyalty</mat-icon> Adicione benefícios</li>
+            <li><mat-icon>format_list_bulleted</mat-icon> Consulte cadastros</li>
+            <li><mat-icon>delete</mat-icon> Exclua usuários</li>
+       
+        </ul>
+    </div>
+
+
+ 
+
+</div>
+
+
+
+
+
+
+</div>
