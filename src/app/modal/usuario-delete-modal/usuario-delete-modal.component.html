@@ -2,7 +2,7 @@
     <div class="modal-container">
       <button class="close-button" (click)="fecharModal()">X</button>
       <h2>Confirmação de exclusão</h2>
-      <p>Deseja realmente excluir o usuário {{ usuario?.nome }}?</p>
+      <p>Deseja realmente excluir o usuário {{ usuario.nome }}?</p>
       <div class="buttons-container">
         <button mat-button (click)="confirmarExclusao(data.id)">Confirmar</button>
         <button mat-button (click)="fecharModal()">Cancelar</button>
